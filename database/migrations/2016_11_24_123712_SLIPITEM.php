@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CART extends Migration
+class SLIPITEM extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CART extends Migration
      */
     public function up()
     {
-      Schema::create('CART', function (Blueprint $table) {
-          $table->increments('id');
-          $table->integer('userID');
+      Schema::create('SLIPITEM', function (Blueprint $table) {
           $table->integer('itemID');
+          $table->integer('slipID');
+          $table->integer('num');
       });
     }
 
@@ -27,6 +27,6 @@ class CART extends Migration
      */
     public function down()
     {
-        Schema::drop('CART');
+        Schema::drop('SLIPITEM');
     }
 }

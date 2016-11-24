@@ -16,7 +16,8 @@ class ITEM extends Migration
       Schema::create('ITEM', function (Blueprint $table) {
           $table->increments('id');
           $table->string('name');
-          $table->int('price');
+          $table->integer('price');
+          $table->integer('categoryID');
       });
     }
 

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class USER extends Migration
+class ITEMIMAGE extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class USER extends Migration
      */
     public function up()
     {
-      Schema::create('MST_USER', function (Blueprint $table) {
+      Schema::create('ITEMIMAGE', function (Blueprint $table) {
           $table->increments('id');
-          $table->string('name');
+          $table->string('url');
+          $table->integer('itemID');
       });
     }
 
@@ -26,6 +27,6 @@ class USER extends Migration
      */
     public function down()
     {
-        Schema::drop('MST_USER');
+        Schema::drop('ITEMIMAGE');
     }
 }
