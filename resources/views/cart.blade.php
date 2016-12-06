@@ -1,59 +1,55 @@
+@extends('app')
 @section('title','cart')
 @section('content')
-		<center>
-			<!-- Main -->
-					<header>
-						<h1></h1>
-						<p></p>
-					</header>
-					<section class="tiles">
 
-						<table>
-							<caption>
-								<h3>カート</h3></caption>
-							<thead>
-								<tr>
-									<th data-field="item">商品</th>
-									<th data-field="number">数量</th>
-									<th data-field="price">金額</th>
-									<th data-field="delete">削除</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>
-										<img src="" height="100" width="150" alt="" />
-										<p></p>
-									</td>
-									<td>
-										<form>
-											<select name="">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        </select>
-										</form>
-									</td>
-									<td>￥</td>
+<center>
 
-								</tr>
-							</tbody>
-							@endforeach
-						</table>
+	<h3>cart</h3>
+	<table class="cartdata">
 
-					</section>
-				</div>
-			</div>
+		<tbody>
+			<tr>
+				<th>商品画像</th>
+				<th>商品</th>
+				<th>数量</th>
+				<th>金額</th>
+				<th>削除</th>
+				<th>合計金額</th>
+			</tr>
+			<tr>
+				<td style="position: relative;">
+					<img src="" height="100" width="150" alt="" style="
+								margin: auto;
+								top: 0;
+								bottom: 0;
+								left: 0;
+								right: 0;
+								position: absolute;
+							">
+				</td>
+				<td style="text-align:center;vertical-align:middle">xxxxx</td>
+				<td>
+					<form>
+						<select class="select-box02">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+						</select>
+					</form>
+				</td>
+				<td>￥</td>
+				<td></td>
+				<td>￥</td>
+			</tr>
+		</tbody>
+	</table>
 
-			<ul class="actions">
-				<li><a href="arinko" class="button">商品一覧</a></li>
-			</ul>
 
-		</center>
-		@endsection
+</center>
+@endsection
