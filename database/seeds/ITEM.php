@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class ITEM extends Seeder
+class ITEM_SEEDER extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,7 @@ class ITEM extends Seeder
      */
     public function run()
     {
+      DB::table('ITEM')->delete();
       DB::table('ITEM')->insert([
          'id'=>1,
          'name'=>'トゥインクルボックスフルール',

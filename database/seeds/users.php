@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class users extends Seeder
+class users_SEEDER extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,7 @@ class users extends Seeder
      */
     public function run()
     {
+      DB::table('users')->delete();
       DB::table('users')->delete();
       //faker使う。普通に使う場合と同じ。
       $faker = Faker\Factory::create('ja_JP');

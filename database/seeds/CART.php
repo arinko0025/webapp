@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class CART extends Seeder
+class CART_SEEDER extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,7 @@ class CART extends Seeder
      */
     public function run()
     {
+      DB::table('CART')->delete();
         //
     }
 }

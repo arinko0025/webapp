@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class SLIPITEM extends Seeder
+class SLIPITEM_SEEDER extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,7 @@ class SLIPITEM extends Seeder
      */
     public function run()
     {
+      DB::table('SLIPITEM')->delete();
         //
     }
 }

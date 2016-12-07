@@ -2,6 +2,8 @@
 @section('title','top')
 @section('content')
 
+			{{-- <p>{{$key}} ::: </p> --}}
+
 		<!-- Main -->
 		<div id="main">
 			<div class="inner">
@@ -10,16 +12,17 @@
 					<p></p>
 				</header>
 				<section class="tiles">
+					@foreach ($category as $key => $value)
 					<article class="style1">
-						<span class="image"><img src="" height="300" width="246" alt="" /></span>
-						<a href="/product?id=">
+						<span class="image"><img src="{{$value->images}}" height="300" width="246" alt="" /></span>
+						<a href="/item?id={{$value->id}}">
 							<h2></h2>
 							<div class="content">
-								<p>text</p>
-								<p>￥00000</p>
+								<p>{{$value->name}}</p>
 							</div>
 						</a>
 					</article>
+					@endforeach
 				</section>
 			</div>
 		</div>

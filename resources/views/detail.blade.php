@@ -15,6 +15,7 @@
 	<div class="inner">
 		<center>
 			<section class="tiles0">
+				@foreach ($item as $key => $value)
 				<article class="style7">
 					<script type="text/javascript">
 						jQuery(document).ready(function($) {
@@ -31,14 +32,16 @@
 					</script>
 					<div class="slider">
 						<ul class="bxslider">
-							<li><img src="" alt="" height="250" width="350"></li>
+							@foreach ($value->Img as $Imgvalue)
+								<li><img src="{{$Imgvalue->url}}" alt="" height="250" width="350"></li>
+							@endforeach
 						</ul>
 					</div>
 				</article>
 
 				<article class="style8">
-					<p></p>
-					<p>価格：￥</p>
+					<p>{{$value->name}}</p>
+					<p>価格：￥{{$value->price}}</p>
 
 					<form action="/cart?id=" method="post">
 
@@ -48,6 +51,7 @@
 						</ul>
 					</form>
 				</article>
+				@endforeach
 			</section>
 		</center>
 	</div>

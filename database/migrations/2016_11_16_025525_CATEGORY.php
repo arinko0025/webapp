@@ -16,6 +16,7 @@ class CATEGORY extends Migration
       Schema::create('CATEGORY', function (Blueprint $table) {
           $table->increments('id');
           $table->string('name');
+          $table->string('images');
       });
     }
 

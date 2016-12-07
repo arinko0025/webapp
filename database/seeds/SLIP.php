@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class SLIP extends Seeder
+class SLIP_SEEDER extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,7 @@ class SLIP extends Seeder
      */
     public function run()
     {
+      DB::table('SLIP')->delete();
         //
     }
 }
