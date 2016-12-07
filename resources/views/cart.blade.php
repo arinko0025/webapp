@@ -50,6 +50,16 @@
 		</tbody>
 	</table>
 
+<div class="cartsub">
+		<div class="cartbtn">
+				<div class="itembutton">
+				    <button type="button" name="itembutton">商品一覧</button>
+				</div>
+				<div class="procedurebutton">
+				    <button type="button" name="procedurebutton">購入手続き</button>
+				</div>
+		</div>
+</div>
 
 </center>
 @endsection

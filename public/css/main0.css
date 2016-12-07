@@ -757,6 +757,25 @@ input[type="radio"]+label:before {
     margin-right: 50px;
 }
 
+/*div.compsub{
+    position: relative;
+    width: 500;
+    height: 500;
+}
+div.comp{
+    position:absolute;
+    width: 400;
+    height: 400;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+}*/
+div.completion h3{
+    padding-top: 50px;
+    text-align: center;
+}
 
 
 /*style
@@ -1026,7 +1045,7 @@ main{
 }
 
 .cartdata{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .cartdata caption{
@@ -1091,6 +1110,93 @@ main{
 
 
 /* Button */
+div.cartsub{
+    position: relative;
+    width: 500px;
+}
+div.cartbtn{
+    position: absolute;
+    width: 280px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+div.itembutton{
+    padding-bottom: 20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    float: left;
+    /*right: 0;*/
+}
+div.procedurebutton{
+    padding-bottom: 20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    float: right;
+    /*left: 0;*/
+}
+div.buysub{
+    position: relative;
+    width: 400px;
+}
+div.buybtn{
+    position: absolute;
+    width: 200px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+div.cartbutton{
+    padding-bottom: 20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    float: left;
+    /*right: 0;*/
+}
+div.buybutton{
+    padding-bottom: 20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    float: right;
+    /*left: 0;*/
+}
+
+div.compsub{
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+div.copmbtn{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+div.comp{
+    padding-bottom: 20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+
+/*div.buybutton{
+    padding-bottom: 20px;
+}*/
 
 input[type="submit"], input[type="reset"], input[type="button"], button, .button {
     -moz-appearance: none;

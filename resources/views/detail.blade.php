@@ -1,4 +1,6 @@
-@extends('app') @section('title','商品詳細') @section('head')
+@extends('app')
+@section('title','商品詳細')
+@section('head')
 
 <!-- Latest compiled and minified JavaScript -->
 

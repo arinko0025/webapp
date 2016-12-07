@@ -65,8 +65,16 @@
     </tr>
   </table>
 
-
-
+  <div class="buysub">
+  		<div class="buybtn">
+  				<div class="cartbutton">
+  				    <button type="button" name="cartbutton">戻る</button>
+  				</div>
+  				<div class="buybutton">
+  				    <button type="button" name="buybutton">購入</button>
+  				</div>
+  		</div>
+  </div>
 
 </center>
 
