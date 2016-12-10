@@ -3,11 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\ITEM;
 
 class CartController extends Controller
 {
   public function index(){
-    return view('cart');
+    $cart = session()->get('cart');
+    if(!isset($cart)){
+      $cart = [];
+    }
+    $item = ITEM::whereIn('id',$cart)->with('Img')->get();
+    return view('cart',compact('item'));
   }
 
   public function store(Request $request){

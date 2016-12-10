@@ -68,10 +68,10 @@
   <div class="buysub">
   		<div class="buybtn">
   				<div class="cartbutton">
-  				    <button type="button" name="cartbutton">戻る</button>
+  				    <a href="/cart" class="button" name="cartbutton">戻る</a>
   				</div>
   				<div class="buybutton">
-  				    <button type="button" name="buybutton">購入</button>
+  				    <a href="/completion" class="button" name="buybutton">購入</a>
   				</div>
   		</div>
   </div>

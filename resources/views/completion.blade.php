@@ -12,7 +12,7 @@
 <div class="compsub">
     <div class="compbtn">
         <div class="comp">
-            <button type="button" name="compbutton">トップ戻る</button>
+            <a href="/top" class="button" name="compbutton">トップ戻る</a>
         </div>
     </div>
 </div>

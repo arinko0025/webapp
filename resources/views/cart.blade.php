@@ -1,5 +1,10 @@
 @extends('app')
 @section('title','cart')
+
+@section('header')
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+@endsection
+
 @section('content')
 
 <center>
@@ -14,11 +19,11 @@
 				<th>数量</th>
 				<th>金額</th>
 				<th>削除</th>
-				<th>合計金額</th>
 			</tr>
+			@foreach ($item as $key => $value)
 			<tr>
-				<td style="position: relative;">
-					<img src="" height="100" width="150" alt="" style="
+				<td width=200; style="position: relative;">
+					<img src="{{$value->Img[0]->url}}" height="100" width="150" alt="" style="
 								margin: auto;
 								top: 0;
 								bottom: 0;
@@ -27,7 +32,7 @@
 								position: absolute;
 							">
 				</td>
-				<td style="text-align:center;vertical-align:middle">xxxxx</td>
+				<td style="text-align:center;vertical-align:middle">{{$value->name}}</td>
 				<td>
 					<form>
 						<select class="select-box02">
@@ -43,20 +48,27 @@
 						</select>
 					</form>
 				</td>
-				<td>￥</td>
-				<td></td>
-				<td>￥</td>
+				<td>￥{{$value->price}}</td>
+				<td><a href="" class="material-icons" name="delete">delete</a></td>
 			</tr>
+			@endforeach
 		</tbody>
+	</table>
+
+	<table class="sumprice">
+		<tr>
+			<th>合計金額</th>
+			<td>￥</td>
+		</tr>
 	</table>
 
 <div class="cartsub">
 		<div class="cartbtn">
 				<div class="itembutton">
-				    <button type="button" name="itembutton">商品一覧</button>
+				    <a href="/top" class="button" name="itembutton">トップに戻る</a>
 				</div>
 				<div class="procedurebutton">
-				    <button type="button" name="procedurebutton">購入手続き</button>
+				    <a href="/buy" class="button" name="procedurebutton">購入手続き</a>
 				</div>
 		</div>
 </div>
