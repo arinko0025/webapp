@@ -15,6 +15,7 @@ Route::get('/top','TopController@index');
 Route::get('/item','ItemController@index');
 Route::get('/detail','ItemController@detail');
 Route::get('/cart','CartController@index');
+Route::post('/cart','CartController@store');
 Route::get('/mypage','MypageController@index');
 Route::get('/buy','BuyController@index');
 Route::get('/completion','CompletionController@index');

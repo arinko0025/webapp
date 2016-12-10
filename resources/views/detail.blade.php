@@ -43,8 +43,9 @@
 					<p>{{$value->name}}</p>
 					<p>価格：￥{{$value->price}}</p>
 
-					<form action="/cart?id=" method="post">
-
+					<form action="/cart" method="post">
+						<input type="hidden" name="item_id" value="{{$item[0]->id}}">
+						{{csrf_field()}}
 						<ul class="actions fit">
 							<li><a href="arinko" class="button fit">一覧に戻る</a></li>
 							<li><input type="submit" class="button special fit" value="カートに入れる"></li>
