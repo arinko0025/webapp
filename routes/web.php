@@ -19,6 +19,7 @@ Route::post('/cart','CartController@store');
 Route::post('/cart/delete','CartController@destroy');
 Route::get('/mypage','MypageController@index');
 Route::get('/buy','BuyController@index');
+Route::post('/buy','BuyController@store');
 Route::get('/completion','CompletionController@index');
 
 Auth::routes();

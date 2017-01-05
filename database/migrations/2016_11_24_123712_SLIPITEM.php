@@ -14,6 +14,7 @@ class SLIPITEM extends Migration
     public function up()
     {
       Schema::create('SLIPITEM', function (Blueprint $table) {
+          $table->increments('id');
           $table->integer('itemID');
           $table->integer('slipID');
           $table->integer('num');

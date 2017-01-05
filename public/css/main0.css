@@ -516,9 +516,9 @@ dl dd {
 
 form {
     /*margin: -1em 0 2em 0;*/
-    font-family: monospace;
+    /*font-family: monospace;
     text-align: center;
-    display: inline-block;
+    display: inline-block;*/
 }
 
 form:after {

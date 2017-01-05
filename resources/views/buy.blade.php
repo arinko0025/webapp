@@ -5,6 +5,9 @@
 <center>
 
 <h3>buy</h3>
+
+<form class="" action="/buy" method="post">
+{{csrf_field()}}
 <table class="cartdata">
   <tbody>
     <tr>
@@ -27,7 +30,7 @@
       </td>
       <td style="text-align:center;vertical-align:middle">{{$value->name}}</td>
       <td>
-        <select class="select-box02" name="num" style="display:inline-block;">
+        <select class="select-box02" name="num[{{$value->id}}]" style="display:inline-block;">
           @foreach (range(1,9) as $num)
             <option value="{{$num}}">{{$num}}</option>
           @endforeach
@@ -64,11 +67,11 @@
   				    <a href="/cart" class="button" name="cartbutton">戻る</a>
   				</div>
   				<div class="buybutton">
-  				    <a href="/completion" class="button" name="buybutton">購入</a>
+  				    <input type="submit" class="button" value="購入">
   				</div>
   		</div>
   </div>
-
+</form>
 </center>
 
 @endsection
