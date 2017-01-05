@@ -8,24 +8,22 @@ use App\ITEM;
 class CartController extends Controller
 {
   public function index(){
-    $cart = session()->get('cart');
-    if(!isset($cart)){
-      $cart = [];
-    }
-    $item = ITEM::whereIn('id',$cart)->with('Img')->get();
+    $cart = new \App\Service\CartService();
+    $item = $cart->getCart();
     return view('cart',compact('item'));
   }
 
   public function store(Request $request){
-    $item_id = $request->input('item_id');
+    $id = $request->input('item_id');
+    $cart = new \App\Service\CartService();
+    $cart->addCart($id);
+    return redirect('cart');
+  }
 
-    $cart = session()->get('cart');
-    if(!isset($cart)){
-      $cart = [];
-    }
-    $cart[] = $item_id;
-    session()->put('cart',$cart);
-
+  public function destroy(Request $request){
+    $id = $request->input('item_id');
+    $cart = new \App\Service\CartService();
+    $cart->removeCart($id);
     return redirect('cart');
   }
 }

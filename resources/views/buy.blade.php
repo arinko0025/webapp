@@ -5,20 +5,18 @@
 <center>
 
 <h3>buy</h3>
-
 <table class="cartdata">
-  <caption>購入商品</caption>
   <tbody>
     <tr>
       <th>商品画像</th>
       <th>商品</th>
       <th>数量</th>
-      <th>金額</th>
-      <th>合計金額</th>
+      <th>小計</th>
     </tr>
+    @foreach ($item as $key => $value)
     <tr>
-      <td style="position: relative;">
-        <img src="" height="100" width="150" alt="" style="
+      <td width="200" style="position: relative;">
+        <img src="{{$value->Img[0]->url}}" height="100" width="150" alt="" style="
               margin: auto;
               top: 0;
               bottom: 0;
@@ -27,41 +25,36 @@
               position: absolute;
             ">
       </td>
-      <td style="text-align:center;vertical-align:middle">xxxxx</td>
+      <td style="text-align:center;vertical-align:middle">{{$value->name}}</td>
       <td>
-        <form>
-        <select class="select-box02">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
+        <select class="select-box02" name="num" style="display:inline-block;">
+          @foreach (range(1,9) as $num)
+            <option value="{{$num}}">{{$num}}</option>
+          @endforeach
         </select>
-      </form>
     </td>
-      <td>￥</td>
-      <td>￥</td>
+      <td>￥{{$value->price}}</td>
     </tr>
+    @endforeach
   </tbody>
 </table>
+
+
+
 
 <table class="userdata">
   <caption>お届け先情報</caption>
     <tr>
       <th>お名前</th>
-      <td></td>
+      <td>{{$user->name}}</td>
     </tr>
     <tr>
       <th>住所</th>
-      <td></td>
+      <td>{{$user->address}}</td>
     </tr>
     <tr>
       <th>電話番号</th>
-      <td></td>
+      <td>{{$user->tel}}</td>
     </tr>
   </table>
 

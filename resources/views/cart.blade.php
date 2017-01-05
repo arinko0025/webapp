@@ -16,7 +16,6 @@
 			<tr>
 				<th>商品画像</th>
 				<th>商品</th>
-				<th>数量</th>
 				<th>金額</th>
 				<th>削除</th>
 			</tr>
@@ -33,43 +32,33 @@
 							">
 				</td>
 				<td style="text-align:center;vertical-align:middle">{{$value->name}}</td>
-				<td>
-					<form>
-						<select class="select-box02">
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-							<option value="9">9</option>
-						</select>
-					</form>
-				</td>
 				<td>￥{{$value->price}}</td>
-				<td><a href="" class="material-icons" name="delete">delete</a></td>
+				<td><form class="" action="/cart/delete" method="post">
+					{{csrf_field()}}
+					<input type="hidden" name="item_id" value="{{$value->id}}">
+					<button type="submit" class="material-icons" style="box-shadow: inherit;">delete</button></td>
+				</form>
 			</tr>
 			@endforeach
 		</tbody>
 	</table>
 
-	<table class="sumprice">
-		<tr>
-			<th>合計金額</th>
-			<td>￥</td>
-		</tr>
-	</table>
+
 
 <div class="cartsub">
 		<div class="cartbtn">
 				<div class="itembutton">
 				    <a href="/top" class="button" name="itembutton">トップに戻る</a>
 				</div>
+				@if(Auth::check())
 				<div class="procedurebutton">
 				    <a href="/buy" class="button" name="procedurebutton">購入手続き</a>
 				</div>
+				@else
+				<div class="procedurebutton">
+						<a href="/login" class="button" name="procedurebutton">login</a>
+				</div>
+				@endif
 		</div>
 </div>
 

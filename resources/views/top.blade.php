@@ -1,9 +1,7 @@
 @extends('app')
 @section('title','top')
 @section('content')
-
-			{{-- <p>{{$key}} ::: </p> --}}
-
+	
 		<!-- Main -->
 		<div id="main">
 			<div class="inner">

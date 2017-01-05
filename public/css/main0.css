@@ -1218,10 +1218,104 @@ div.comp{
     right: 0;
 }
 
+/*ログイン*/
+
+.navbar-def {
+    background-color: #fff;
+    border-color: #ffffff;
+}
+
+  div.form-login{
+    padding-top: 10px;
+  }
+  .btn_login{
+    padding-left: 155px;
+    padding-top: 20px;
+  }
+  .btnlogin{
+    height: 50px;
+     color: #ffffff;
+  }
+
+
+
+  .form-control{
+    background-color: #ffffff;
+  }
+  .form-password{
+    color: #ffffff;
+    background-color: #ffffff;
+    height: 50px;
+  }
+
+  .btn_Register{
+    padding-left: 155px;
+  }
+  .btnprimary{
+     height: 50px;
+     color: #ffffff;
+     background-color: #ffffff;
+     border-color: #ffffff;
+  }
+
+  .password_lavel{
+    float: left;
+    padding-left: 25px;
+    padding-bottom: 15px;
+  }
+
+  .email_lavel{
+    color: #ffffff;
+  }
+
 
 /*div.buybutton{
     padding-bottom: 20px;
 }*/
+
+  div.panel-body {
+      padding: 20px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      position: relative;
+      right: 0;
+      left: 0;
+      margin: auto;
+      width: 700px;
+      height: 300px;
+    }
+
+  form.form-horizontal{
+      position: absolute;
+      padding-left: 100px;
+      width: 550px;
+  }
+
+  div.form-group{
+      padding-top: 20px;
+  }
+  div.pan-body {
+      padding: 20px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      position: relative;
+      right: 0;
+      left: 0;
+      margin: auto;
+      width: 700px;
+      height: 300px;
+    }
+
+    form.form-horizon{
+        position: absolute;
+        padding-left: 100px;
+        width: 550px;
+    }
+
+  .navbar-default {
+    background-color: #fff;
+}
+
 
 input[type="submit"], input[type="reset"], input[type="button"], button, .button {
     -moz-appearance: none;

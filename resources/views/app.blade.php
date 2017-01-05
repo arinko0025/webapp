@@ -19,13 +19,18 @@
 		<div id="header">
 			<nav>
 					<ul>
+						@if(Auth::check())
+						<li><a href="/logout">logout</a></li>
 						<li><a href="/mypage">mypage</a></li>
+						@else
+						<li><a href="/login">login</a></li>
+					@endif
 						<li><a href="/cart">cart</a></li>
 					</ul>
 			</nav>
 					<!-- Logo -->
 			<div id="logo">
-				<a class="logo">
+				<a class="logo" href="/top">
 					<img src="images/20.png" alt="" />
 				</a>
 			</div>

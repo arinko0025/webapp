@@ -9,7 +9,7 @@
   <div class="main">
     <div class="sideber">
       <dt>mypage</dt>
-      <dd>xxxx</dd>
+      <dd>{{$user->name}}</dd>
     </div>
 
     <div class="mypage">
@@ -18,12 +18,12 @@
               <tr class="member">
                   <th>お客様情報</th>
                   <td>
-                      <li>ID：</li>
-                      <li>名前：</li>
-                      <li>メールアドレス：</li>
-                      <li>郵便番号：〒</li>
-                      <li>住所：</li>
-                      <li>電話番号：</li>
+                      <li>ID：{{$user->id}}</li>
+                      <li>名前：{{$user->name}}</li>
+                      <li>性別：{{config("column.sex.$user->sex")}}</li>
+                      <li>メールアドレス：{{$user->email}}</li>
+                      <li>住所：{{$user->address}}</li>
+                      <li>電話番号：{{$user->tel}}</li>
                   </td>
               </tr>
           </table>
