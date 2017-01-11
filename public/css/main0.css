@@ -23,9 +23,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: block;
 }
 
-body {
+/*body {
     line-height: 1;
-}
+}*/
 
 ol, ul {
     list-style: none;
@@ -51,9 +51,9 @@ table {
     border-spacing: 0;
 }
 
-body {
+/*body {
     -webkit-text-size-adjust: none;
-}
+}*/
 
 
 /* Box Model */
@@ -71,9 +71,9 @@ body {
     width: device-width;
 }
 
-body {
+/*body {
     -ms-overflow-style: scrollbar;
-}
+}*/
 
 @media screen and (max-width: 480px) {
     html, body {
@@ -102,8 +102,8 @@ body.is-loading *, body.is-loading *:before, body.is-loading *:after {
 body, input, select, textarea {
     color: #585858;
     font-family: "Source Sans Pro", Helvetica, sans-serif;
-    font-size: 16pt;
-    font-weight: 350;
+    /*font-size: 16pt;
+    font-weight: 350;*/
     line-height: 1.75;
 }
 
@@ -512,6 +512,7 @@ dl dd {
 }
 
 
+
 /* Form */
 
 form {
@@ -596,6 +597,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="tel
     padding: 0;
     text-decoration: none;
     width: 100%;
+    text-align: center;
 }
 
 input[type="text"]:invalid, input[type="password"]:invalid, input[type="email"]:invalid, input[type="tel"]:invalid, select:invalid, textarea:invalid {

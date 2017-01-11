@@ -32,6 +32,10 @@ class CartService
     $result = array_values($result);
     session()->put('cart',$result);
   }
+
+  public function clearCart(){
+    session()->put('cart',[]);
+  }
 }
 
 

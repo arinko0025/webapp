@@ -30,18 +30,23 @@
       </td>
       <td style="text-align:center;vertical-align:middle">{{$value->name}}</td>
       <td>
-        <select class="select-box02" name="num[{{$value->id}}]" style="display:inline-block;">
+        <select class="select-box02 item{{$value->id}}" name="num[{{$value->id}}]" style="display:inline-block;">
           @foreach (range(1,9) as $num)
             <option value="{{$num}}">{{$num}}</option>
           @endforeach
         </select>
     </td>
-      <td>￥{{$value->price}}</td>
+      <td><input type="text" value="￥{{$value->price}}"  class="itemprice{{$value->id}}" disabled></td>
     </tr>
     @endforeach
   </tbody>
 </table>
-
+<table class="userdata">
+  <tr>
+    <th>合計金額</th>
+    <td><input style="text-align:center;" class="sumprice" type="text" value="0" disabled></td>
+  </tr>
+</table>
 
 
 
@@ -61,6 +66,8 @@
     </tr>
   </table>
 
+  <p>お支払い：代引きとなります</p>
+
   <div class="buysub">
   		<div class="buybtn">
   				<div class="cartbutton">
@@ -73,5 +80,34 @@
   </div>
 </form>
 </center>
+	<script src="/js/jquery.min.js"></script>
+<script type="text/javascript">
+  +function(){
+    var itemdata = [];
+    var itemprice = [];
+    var sumprice = 0;
 
+    @foreach ($item as $key => $value)
+      itemdata.push( {{$value->id}} );
+      itemprice.push( {{$value->price}} );
+      sumprice += {{$value->price}} ;
+    @endforeach
+
+    $(".sumprice").val("￥"+sumprice);
+
+    $("select").change(function() {
+      sumprice = 0;
+
+      itemdata.forEach(function(value,index){
+        cnt = $(".item" + value).val();
+        $(".itemprice" + value).val( "￥" + (cnt * itemprice[index]));
+        sumprice += cnt * itemprice[index];
+      });
+
+      $(".sumprice").val("￥"+sumprice);
+
+    });
+
+  }();
+</script>
 @endsection

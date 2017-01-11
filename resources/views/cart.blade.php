@@ -10,6 +10,9 @@
 <center>
 
 	<h3>cart</h3>
+	@if(session('error'))
+	<h4 style="color:red;">カートの中身が空です</h4>
+	@endif
 	<table class="cartdata">
 
 		<tbody>

@@ -2,6 +2,11 @@
 
 @section('content')
 <div class="container">
+  <div id="logo">
+    <a class="logo" href="/top">
+      <img src="images/20.png" alt="" />
+    </a>
+  </div>
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -72,8 +77,18 @@
                             <label for="sex" class="col-md-4 control-label">Sex</label>
 
                             <div class="col-md-6">
-                                <input id="sex" type="radio" class="form-control" name="sex" value="1" required>
-                                <input id="sex" type="radio" class="form-control" name="sex" value="2" required>
+                              <div class="row">
+                                <div class="col-md-1">
+                                  <input id="sex" type="radio" name="sex" value="1" required>
+                                </div>
+                                <div class="col-md-11">{{config("column.sex.1")}}</div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-1">
+                                  <input id="sex" type="radio" name="sex" value="2" required>
+                                </div>
+                                <div class="col-md-11">{{config("column.sex.2")}}</div>
+                              </div>
                             </div>
                         </div>
 

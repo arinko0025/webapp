@@ -12,13 +12,51 @@ use App\ITEM;
 class BuyController extends Controller
 {
   public function index(){
+    if(!Auth::check()){
+      return redirect('/login');
+    }
     $cart = new \App\Service\CartService();
     $item = $cart->getCart();
+    if(empty($item->toArray())){
+      return back()->with('error','e');
+    }
     $user = Auth::user();
     return view('buy',compact('item','sumprice','user'));
   }
 
   public function store(Request $request){
+    $userid = Auth::user()->id;
+
+    $itemnum = $request->input('num');
+
+    $sumprice = 0;
+    foreach ($itemnum as $key => $value) {
+      $data = ITEM::where('id',$key)->first();
+      $sumprice += $data->price * $value;
+    }
+    $id = Carbon::now()->timestamp;
+
+    SLIP::insert([
+      "id" => $id,
+      "sumprice" => $sumprice,
+      "userID" => $userid,
+      "getmoney" => 0
+    ]);
+
+    foreach ($itemnum as $key => $value) {
+      SLIPITEM::insert([
+        "itemID" => $key,
+        "slipID" => $id,
+        "num" => $value
+      ]);
+    }
+    $cart = new \App\Service\CartService();
+    $cart->clearCart();
+
+    return redirect('/completion');
+  }
+
+  public function stores(Request $request){
     // userIDを取得
     $userid = Auth::user()->id;
 
@@ -52,6 +90,10 @@ class BuyController extends Controller
         "num" => $value
       ]);
     }
+
+    // cartの中身をすべて消す
+    $cart = new \App\Service\CartService();
+    $cart->clearCart();
 
     return redirect('/completion');
   }

@@ -2,6 +2,11 @@
 
 @section('content')
 <div class="container">
+  <div id="logo">
+    <a class="logo" href="/top">
+      <img src="images/20.png" alt="" />
+    </a>
+  </div>
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
